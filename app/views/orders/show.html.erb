@@ -7,7 +7,7 @@
     <%= render 'lineitem', product: lineitem.product, quantity: lineitem[:quantity] %>
     <% end %>
   </div>
-    <h1>Order total <%= @order.total_cents %></h1>
+    <h1>Order total $<%= @order.total_cents %></h1>
     <h1>Order ITEMS <%= @order.email %></h1>
     
   </header>
