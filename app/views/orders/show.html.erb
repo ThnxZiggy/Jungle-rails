@@ -1,7 +1,13 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h1>Order # <%= @order.id %></h1>
+      <div class="products">
+    <%= render @lineitem %>
+  </div>
+    <h1>Order total <%= @order.total_cents %></h1>
+    <h1>Order ITEMS <%= @order.email %></h1>
+    
   </header>
 
   <div class="order-summary jumbotron">
