@@ -3,7 +3,9 @@
   <header class="page-header">
     <h1>Order # <%= @order.id %></h1>
       <div class="products">
-    <%= render @lineitem %>
+    <% @order.line_items.each do |lineitem| %>
+    <%= render 'lineitem', product: lineitem.product, quantity: lineitem[:quantity] %>
+    <% end %>
   </div>
     <h1>Order total <%= @order.total_cents %></h1>
     <h1>Order ITEMS <%= @order.email %></h1>
